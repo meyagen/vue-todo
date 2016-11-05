@@ -1,6 +1,6 @@
-<template lang=slm>
+<template lang="jade">
   #app
-    img src='./assets/logo.png'
+    img(src='./assets/logo.png')
     hello
 </template>
 
@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style lang=stylus>
+<style lang="stylus">
 #app
   font-family: 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
