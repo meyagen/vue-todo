@@ -9,6 +9,18 @@ var env = process.env.NODE_ENV
 var cssSourceMapDev = (env === 'development' && config.dev.cssSourceMap)
 var cssSourceMapProd = (env === 'production' && config.build.productionSourceMap)
 var useCssSourceMap = cssSourceMapDev || cssSourceMapProd
+var webpack = require('webpack')
+
+var jquery = new webpack.ProvidePlugin({
+  $: 'jquery',
+  jQuery: 'jquery',
+  'window.jQuery': 'jquery',
+})
+
+var semanticUI = new webpack.ProvidePlugin({
+  semantic: 'semantic-ui-css',
+  'semantic-ui': 'semantic-ui-css'
+})
 
 module.exports = {
   entry: {
@@ -26,7 +38,8 @@ module.exports = {
       'vue$': 'vue/dist/vue',
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components')
+      'components': path.resolve(__dirname, '../src/components'),
+      'semantic-ui': path.resolve(__dirname, '../node_modules/semantic-ui/dist/semantic.min.js')
     }
   },
   resolveLoader: {
@@ -90,5 +103,6 @@ module.exports = {
         browsers: ['last 2 versions']
       })
     ]
-  }
+  },
+  plugins: [jquery, semanticUI]
 }

@@ -2,10 +2,13 @@
   #app
     img(src='./assets/logo.png')
     hello
+
+    //- test semantic ui
+    buttion.ui.secondary.button Ok, let's get started!
 </template>
 
 <script>
-import Hello from './components/Hello';
+import Hello from './components/vue/Hello';
 
 export default {
   name: 'app',
