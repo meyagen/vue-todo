@@ -1,5 +1,5 @@
 <template lang="jade">
-  h1 {{ message }}
+  h1 Todo
 </template>
 
 <script>
@@ -8,7 +8,7 @@ const data = {
 };
 
 export default {
-  name: 'todo',
+  name: 'todo-list',
   data() {
     return data;
   },
