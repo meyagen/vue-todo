@@ -1,24 +1,29 @@
-# todo
+# Vue Todo
 
-> A Vue.js project
+Simple and quick Vue.js setup using [vue-cli](https://github.com/vuejs/vue-cli) and [vue-router](https://github.com/vuejs/vue-router), integrated with [semantic-ui](http://semantic-ui.com/) for styling, [jade/pug](https://pugjs.org/api/getting-started.html) for templates, and [stylus](http://stylus-lang.com/) for css. Modules are installed using [yarn](https://github.com/yarnpkg/yarn)
+
+Built for practicing Vue and for setting up a proper Vue environment for development.
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-npm install
+yarn install
 
 # serve with hot reload at localhost:8080
-npm run dev
+yarn run dev
 
 # build for production with minification
-npm run build
+yarn run build
 
 # run unit tests
-npm run unit
+yarn run unit
 
 # run all tests
-npm test
+yarn test
 ```
+## Things left to do
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- Replace semantic-ui with [skeleton](http://getskeleton.com/) or some other css boilerplate (because of jquery dependency)
+- Fix/add unit tests
+- Add server side rendering
