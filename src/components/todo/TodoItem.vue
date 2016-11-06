@@ -1,11 +1,15 @@
 <template lang="jade">
   div
     .ui.checkbox
-      input(type='checkbox' @click='finishTodo')      
-      label
-        strike(v-if='todoItem.done')
-          i{{ todoItem.text }}
-        span(v-else) {{ todoItem.text }}
+      div(v-if='todoItem.done')
+        input(type='checkbox' @click='finishTodo' checked)
+        label
+          strike(v-if='todoItem.done')
+           i{{ todoItem.text }}
+      div(v-else)
+        input(type='checkbox' @click='finishTodo')
+        label
+          span{{ todoItem.text }}
     br
 </template>
 
