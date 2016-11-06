@@ -1,0 +1,28 @@
+<template lang="jade">
+  div
+    .ui.checkbox
+      input(type='checkbox' @click='finishTodo')      
+      label
+        strike(v-if='todoItem.done')
+          i{{ todoItem.text }}
+        span(v-else) {{ todoItem.text }}
+    br
+</template>
+
+<script>
+function finishTodo() {
+  this.todoItem.done = !this.todoItem.done;
+}
+
+export default {
+  name: 'todo-item',
+  props: ['item'],
+  data() {
+    return { todoItem: this.item };
+  },
+  methods: { finishTodo },
+};
+</script>
+
+<style>
+</style>
